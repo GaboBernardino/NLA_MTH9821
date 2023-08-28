@@ -79,19 +79,19 @@ public:
 	bool Compare(const Matrix<T, NR, NC>& matrix1, double tol) const;
 
 	//operator overloading (arithmetics)
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator+ (const Matrix<U, NR, NC>& lhs, const Matrix<U, NR, NC>& rhs);
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator+ (const U& lhs, const Matrix<U, NR, NC>& rhs);
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator+ (const Matrix<U, NR, NC>& lhs, const U& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator+ (const Matrix<U, NR, NC>& lhs, const Matrix<U, NR, NC>& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator+ (const U& lhs, const Matrix<U, NR, NC>& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator+ (const Matrix<U, NR, NC>& lhs, const U& rhs);
 
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator- (const Matrix<U, NR, NC>& lhs, const Matrix<U, NR, NC>& rhs);
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator- (const U& lhs, const Matrix<U, NR, NC>& rhs);
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator- (const Matrix<U, NR, NC>& lhs, const U& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator- (const Matrix<U, NR, NC>& lhs, const Matrix<U, NR, NC>& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator- (const U& lhs, const Matrix<U, NR, NC>& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator- (const Matrix<U, NR, NC>& lhs, const U& rhs);
 
-	template <class U, int NR, int NC, int NC2> friend Matrix<U, NR, NC2> operator* (const Matrix<U, NR, NC>& lhs, const Matrix<U, NC, NC2>& rhs);
-	template <class U, int NR, int NC> friend qbVector<U> operator* (const qbVector<U>& lhs, const Matrix<U, NR, NC>& rhs);
-	template <class U, int NR, int NC> friend qbVector<U> operator* (const Matrix<U, NR, NC>& lhs, const qbVector<U>& rhs);
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator* (const U& lhs, const Matrix<U, NR, NC>& rhs);
-	template <class U, int NR, int NC> friend Matrix<U, NR, NC> operator* (const Matrix<U, NR, NC>& lhs, const U& rhs);
+	template <class U, int ROWS, int COLS, int COLS2> friend Matrix<U, ROWS, COLS2> operator* (const Matrix<U, NR, NC>& lhs, const Matrix<U, ROWS, COLS2>& rhs);
+	 template <class U, int ROWS, int COLS> friend qbVector<U> operator* (const qbVector<U>& lhs, const Matrix<U, NR, NC>& rhs);
+	 template <class U, int ROWS, int COLS> friend qbVector<U> operator* (const Matrix<U, NR, NC>& lhs, const qbVector<U>& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator* (const U& lhs, const Matrix<U, NR, NC>& rhs);
+	 template <class U, int ROWS, int COLS> friend Matrix<U, NR, NC> operator* (const Matrix<U, NR, NC>& lhs, const U& rhs);
 };
 
 /***********************************************************************************************************

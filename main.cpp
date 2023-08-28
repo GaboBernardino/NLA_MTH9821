@@ -1,9 +1,9 @@
 //Gabriele Bernardino - Code to test Cholesky decomposition based on Dan Stefanica's NLA Primer
 
-#include "Cholesky.hpp"
-#include "StopWatch.hpp"
-#include "BandedMatrix.hpp"
-#include "CubicSpline.hpp"
+#include "MatrixClass/Cholesky.hpp"
+#include "MatrixClass/StopWatch.hpp"
+#include "MatrixClass/BandedMatrix.hpp"
+//#include "/MatrixClass/CubicSpline.hpp"
 using namespace std;
 
 int main() {
